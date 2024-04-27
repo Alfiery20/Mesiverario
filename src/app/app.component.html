@@ -14,11 +14,12 @@
 
               <div class="form-group">
                 <label for="nombre">Nombre de amorcito</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre" required>
               </div>
               <div class="form-group">
                 <label for="clave">Dia que empezamos a ser pareja</label>
-                <input type="text" class="form-control" placeholder="dd-mm-yyyy" id="clave" name="clave" required>
+                <input type="text" class="form-control" formControlName="clave" placeholder="dd-mm-yyyy" id="clave"
+                  required>
               </div>
               <button (click)="obtenerDatos()" class="btn"
                 style="margin-top: 1%; background-color: rgb(254, 128, 167);">Bienvenida a mi corazon :3</button>

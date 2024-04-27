@@ -74,13 +74,19 @@ export class AppComponent {
   }
 
   obtenerDatos() {
-    const nombre = this.loginForm?.get('nombre');
-    const clave = this.loginForm?.get('clave');
-    if (nombre?.value == 'Karina' && clave?.value == '26-07-2023') {
+    const nombre = this.loginForm?.get('nombre')?.value;
+    const clave = this.loginForm?.get('clave')?.value;
+    console.log(nombre);
+    console.log(nombre);
+
+    if (nombre == 'Karina' && clave == '26-07-2023') {
       this.isLogeado = true;
       const audioElement = new Audio('../assets/M.A.I.mp3');
       audioElement.volume = 0.2;
       audioElement.play();
+    } else {
+      this.loginForm?.get('nombre')?.setValue('');
+      this.loginForm?.get('clave')?.setValue('');
     }
   }
 }
